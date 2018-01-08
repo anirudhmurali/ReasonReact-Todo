@@ -4,7 +4,15 @@ This quickstart will give you a Reason React project for a simple Todo applicati
 
 ![Todo](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/ReasonReact.png)
 
-This quickstart makes use of [https://redex.github.io/packages/unpublished/glennsl/refetch](glennsl/refetch) to send HTTP requests, which are handled using Hasura's data APIs.
+**ReasonML** lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.
+
+This quickstart uses [**ReasonReact**](https://reasonml.github.io/reason-react/). ReasonReact is a way to build React components with Reason. This project makes use of [glennsl/refetch](https://redex.github.io/packages/unpublished/glennsl/refetch) package to send HTTP requests, which are handled using Hasura's data APIs.
+
+You can find the below piece of code in `microservices/www/src/src/TodoApp.re`.
+
+Update your cluster name in the two blocks of code. The first one is for inserting the Todo contents, and the second function block is to delete the entry upon toggling.
+
+You can track the insertion/deletion responses in your browser's console window. Open the API console with the command `hasura api-console` in your terminal, and view the **Data** section to see the data being inserted and deleted.
 
 ```
 Resync.(Refetch.(
