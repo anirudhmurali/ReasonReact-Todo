@@ -9,6 +9,7 @@ body, div {
 
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
+  background: linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* w3c */
 }
 
 #root {
@@ -19,6 +20,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+  background-color: white;
 }
 
 .app {
