@@ -2,9 +2,9 @@ FROM node
 
 WORKDIR /src
 
-ADD src /src
-
 RUN npm install
+
+ADD src /src
 
 RUN yarn start
 
