@@ -20,7 +20,6 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: white;
 }
 
 .app {
@@ -30,6 +29,7 @@ body {
   box-shadow: 0 2px 15px #ccc;
   margin: 10px;
   align-items: stretch;
+  background-color: white;
 }
 
 .title {
