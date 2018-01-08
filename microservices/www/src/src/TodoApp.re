@@ -4,8 +4,10 @@ type item = {
   completed: bool
 };
 
+
 let str = ReasonReact.stringToElement;
 let insert = (text) => {
+Js.log("Insertion: ");
 Resync.(Refetch.(
   request(`POST, "https://data.abstemiously42.hasura-app.io/v1/query")
     |> Request.header(`ContentType("application/json"))
@@ -18,7 +20,11 @@ Resync.(Refetch.(
 ));
 };
 
+
+
+
 let delete = (text) => {
+  Js.log("Deletion: ");
 Resync.(Refetch.(
   request(`POST, "https://data.abstemiously42.hasura-app.io/v1/query")
     |> Request.header(`ContentType("application/json"))
@@ -79,6 +85,7 @@ module Input = {
   };
 };
 
+
 type state = {
   items: list(item)
 };
@@ -90,9 +97,13 @@ let component = ReasonReact.reducerComponent("TodoApp");
 
 let lastId = ref(0);
 let newItem = (text) => {
+
   lastId := lastId^ + 1;
   {id: lastId^, title: text, completed: false}
+
+
 };
+
 let make = (children) => {
   ...component,
   initialState: () => {
@@ -116,11 +127,13 @@ let make = (children) => {
       ReasonReact.Update({items: items})
     },
   render: ({state: {items}, reduce}) => {
+
     let numItems = List.length(items);
+
     <div className="app">
       <div className="title">
-        (str("What to do"))
-        <Input onSubmit=(reduce((text) => AddItem(text))) />
+        (str("ReasonReact To-do"))
+        <Input onSubmit=(reduce((text) => AddItem(text)))  />
       </div>
       <div className="items">
         (
@@ -134,9 +147,6 @@ let make = (children) => {
             items
           )))
         )
-      </div>
-      <div className="footer">
-        (str(string_of_int(numItems) ++ " items"))
       </div>
     </div>
   }

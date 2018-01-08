@@ -1,7 +1,7 @@
-description: |
-  This quickstart will give you a fast but solid introduction to using hasura.
-  Follow the steps in the README to get started!
+description: This quickstart will give you a Reason React project for a simple Todo
+  application, integrated with Hasura's data APIs to ainsert and delete data from
+  the database.
 keywords: hello-world, getting-started, hasura, tutorial, quickstart
 media: {}
-name: hello-world
+name: reasonml-react-todo
 platformVersion: v0.15.21
