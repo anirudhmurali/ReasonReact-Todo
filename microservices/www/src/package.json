@@ -1,0 +1,19 @@
+{
+  "name": "reason-to-do",
+  "scripts": {
+    "start": "bsb -make-world",
+    "js": "bsb -make-world",
+    "build": "webpack",
+    "clean": "bsb -clean-world"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "reason-react": "0.2.4",
+    "refetch": "glennsl/refetch"
+  },
+  "devDependencies": {
+    "bs-platform": "^2.0.0",
+    "webpack": "^3.0.0"
+  }
+}
