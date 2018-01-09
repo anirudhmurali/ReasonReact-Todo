@@ -1,18 +1,43 @@
 # ReasonReact Todo with Hasura Data APIs
 
-This quickstart will give you a Reason React project for a simple Todo application, integrated with Hasura's data APIs to insert and delete data from the database.
+## What does this come with?
 
-![Todo](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/ReasonReact.png)
+* [ReasonReact](https://reasonml.github.io/reason-react/) Todo app written with [ReasonML](http://reasonml.github.io)
+* Making API requests with [refetch](https://redex.github.io/packages/unpublished/glennsl/refetch)
+* Served with [`serve`](https://www.npmjs.com/package/serve) package
+* Hot-reloading, instantly view the changes upon every save
+* Cloud-ready Dockerfile deployment
 
-**ReasonML** lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.
+```
+FROM node
 
-This quickstart uses [**ReasonReact**](https://reasonml.github.io/reason-react/). ReasonReact is a way to build React components with Reason. This project makes use of [glennsl/refetch](https://redex.github.io/packages/unpublished/glennsl/refetch) package to send HTTP requests, which are handled using Hasura's data APIs.
+WORKDIR /src
 
-You can find the below piece of code in `microservices/www/src/src/TodoApp.re`.
+ADD src /src
 
-Update your cluster name in the two blocks of code. The first one is for inserting the Todo contents, and the second function block is to delete the entry upon toggling.
+RUN npm install
 
-You can track the insertion/deletion responses in your browser's console window. Open the API console with the command `hasura api-console` in your terminal, and view the **Data** section to see the data being inserted and deleted.
+RUN yarn start
+
+RUN yarn build
+
+RUN yarn global add serve
+
+CMD ["serve", "-s", "public", "-p", "8080"]
+``` 
+
+## Deploy this ReasonReact Todo app instantly!
+
+Press the **Clone & Deploy** button and follow the instructions to clone the quickstart. Browse to `/microservices/www/src` and edit the ReasonML files in `src` folder according to your app. The current serving files are being stored at `public` folder, make sure you update the Dockerfile if you change the structure of the project.
+
+## Architecture of behind the scenes
+
+## Adding Database functionality
+
+You can track the insertion/deletion responses in your browser's console window. Open the API console with the command `hasura api-console` in your terminal, and view the **Data** section to see the data being inserted and deleted. 
+
+You can find the below piece of code in `microservices/www/src/src/TodoApp.re`. Update your cluster name in the two blocks of code. The first one is for inserting the Todo contents, and the second function block is to delete the entry upon toggling.
+
 
 ```
 Resync.(Refetch.(
@@ -41,6 +66,15 @@ Resync.(Refetch.(
     |> Future.whenResolved(Js.log)
 ));
 ```
+
+## Adding Authentication to the App
+
+
+## Next steps:
+
+* [Adding Authentication](https://docs.hasura.io/0.15/manual/gateway/index.html)
+* [Change subdomain](https://docs.hasura.io/0.15/manual/gateway/index.html#custom-domains)
+* [Adding Microservice](https://docs.hasura.io/0.15/manual/custom-microservices/index.html)
 
 ### Resources:
 

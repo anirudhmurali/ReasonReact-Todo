@@ -167,5 +167,9 @@ www:
       namespace: '{{ cluster.metadata.namespaces.user }}'
     upstreamServicePath: /
     upstreamServicePort: 80
+    authorizationPolicy:
+             restrictToRoles: ["users"]
+             noSessionRedirectUrl: https://auth.{{ cluster.name }}.hasura-app.io/ui/login
+             noAccessRedirectUrl: https://auth.{{ cluster.name }}.hasura-app.io/ui/restricted
 
 # To see actual endpoints for these routes, use `$ hasura cluster status`

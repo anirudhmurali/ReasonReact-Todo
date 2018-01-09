@@ -1,10 +1,11 @@
-description: This quickstart will give you a Reason React project for a simple Todo
-  application, integrated with Hasura's data APIs to query data with the database.
+description: Boilerplate code for Reasonml (ReasonReact) that can be deployed to the cloud with a git push (hosted on the Hasura free tier).
 gitUrl: http://github.com/anirudhmurali/ReasonReact-Todo
 keywords: reasonml, react, refetch
 media:
   images:
   - https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/ReasonReact.png
   - https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/ReasonReact2.png
+  videos:
+  - https://player.vimeo.com/video/250235331
 name: reasonml-react-todo
 platformVersion: v0.15.21
