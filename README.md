@@ -9,6 +9,8 @@
 * Cloud-ready **Dockerfile** deployment
 
 ```
+**Dockerfile**
+
 FROM node
 
 WORKDIR /src
@@ -26,7 +28,7 @@ RUN yarn global add serve
 CMD ["serve", "-s", "public", "-p", "8080"]
 ``` 
 
-## Deploy this ReasonReact Todo app instantly!
+## Deploy this ReasonReact Todo app instantly
 
 * Press the **Clone & Deploy** button and follow the instructions to clone the quickstart.
 * Browse to `/microservices/www/src` and edit the ReasonML files in `src` folder according to your app.
@@ -90,7 +92,6 @@ authorizationPolicy:
   restrictToRoles: ["user"]
   noSessionRedirectUrl: https://auth.{{ cluster.name }}.hasura-app.io/ui/
   noAccessRedirectUrl: https://auth.{{ cluster.name }}.hasura-app.io/ui/restricted
-
 ```
 
 ## Next steps:

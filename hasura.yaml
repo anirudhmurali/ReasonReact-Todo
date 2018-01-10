@@ -1,5 +1,5 @@
-description: Boilerplate code for Reasonml (ReasonReact) that can be deployed to the
-  cloud with a git push (hosted on the Hasura free tier).
+description: Boilerplate code for a ReasonML (ReasonReact) tproject that can be deployed
+  to the cloud with a git push (hosted on the Hasura free tier).
 gitUrl: http://github.com/anirudhmurali/ReasonReact-Todo
 keywords: reasonml, react, refetch
 media:
