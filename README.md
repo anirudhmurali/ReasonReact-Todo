@@ -34,6 +34,13 @@ CMD ["serve", "-s", "public", "-p", "8080"]
 
 If you have a ReasonReact app which you want to deploy, edit the contents inside `/microservices/www/src/` according to your app.
 
+## Architecture of what’s happening
+
+![BaaS](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/baas.gif)
+
+![Deployment](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/deploy.gif)
+
+
 ## Adding Database functionality
 
 You can track the insertion/deletion responses in your browser's console window. Open the API console with the command `hasura api-console` in your terminal, and view the **Data** section to see the data being inserted and deleted. 
