@@ -9,8 +9,6 @@
 * Cloud-ready **Dockerfile** deployment
 
 ```
-**Dockerfile**
-
 FROM node
 
 WORKDIR /src
@@ -38,7 +36,6 @@ CMD ["serve", "-s", "public", "-p", "8080"]
 * The current serving files are being stored at `public` folder, make sure you update the Dockerfile if you change the structure of the project.
 
 If you have a ReasonReact app which you want to deploy, edit the contents inside `/microservices/www/src/` according to your app.
-
 
 ## Adding Database functionality
 
@@ -76,11 +73,7 @@ Resync.(Refetch.(
 
 ## Architecture of what’s happening
 
-**Hasura's backend architecture:**
-
-![BaaS](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/baas.gif)
-
-**Deployment's Behind the scenes:**
+**Deployment - Behind the scenes:**
 
 ![Deployment](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/deploy.gif)
 
