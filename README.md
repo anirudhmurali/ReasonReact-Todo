@@ -36,10 +36,13 @@ If you have a ReasonReact app which you want to deploy, edit the contents inside
 
 ## Architecture of what’s happening
 
+**Hasura's backend architecture:**
+
 ![BaaS](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/baas.gif)
 
-![Deployment](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/deploy.gif)
+**Deployment's Behind the scenes:**
 
+![Deployment](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/deploy.gif)
 
 ## Adding Database functionality
 
