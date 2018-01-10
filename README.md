@@ -31,20 +31,14 @@ CMD ["serve", "-s", "public", "-p", "8080"]
 ## Deploy this ReasonReact Todo app instantly
 
 * Press the **Clone & Deploy** button and follow the instructions to clone the quickstart.
-* Browse to `/microservices/www/src` and edit the ReasonML files in `src` folder according to your app.
+* Browse to `/microservices/www/src` and edit the ReasonML files in `src` folder according to your app. 
+
+**NOTE: Make the changes to the cluster name as told in the below database section.**
+
 * The current serving files are being stored at `public` folder, make sure you update the Dockerfile if you change the structure of the project.
 
 If you have a ReasonReact app which you want to deploy, edit the contents inside `/microservices/www/src/` according to your app.
 
-## Architecture of what’s happening
-
-**Hasura's backend architecture:**
-
-![BaaS](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/baas.gif)
-
-**Deployment's Behind the scenes:**
-
-![Deployment](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/deploy.gif)
 
 ## Adding Database functionality
 
@@ -79,6 +73,16 @@ Resync.(Refetch.(
     |> Future.whenResolved(Js.log)
 ));
 ```
+
+## Architecture of what’s happening
+
+**Hasura's backend architecture:**
+
+![BaaS](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/baas.gif)
+
+**Deployment's Behind the scenes:**
+
+![Deployment](https://raw.githubusercontent.com/anirudhmurali/ReasonReact-Todo/master/deploy.gif)
 
 ## Adding Authentication to the App
 
